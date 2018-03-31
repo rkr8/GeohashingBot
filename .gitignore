@@ -144,3 +144,8 @@ pip-selfcheck.json
 
 # End of https://www.gitignore.io/api/vim,linux,python,virtualenv
 
+# Bot token
+config.py
+
+# Installed dependencies
+Pipfile.lock

@@ -40,5 +40,5 @@ def calculate(loc, date):
         west = 1
     djia = dow(date - timedelta(td30))
     sum = md5(bytes('{0}-{1}'.format(date, djia), 'utf-8')).digest()
-    return [str(d * (abs(a) + f)) for (d, f, a) in zip((south, west),
+    return [d * (abs(a) + f) for (d, f, a) in zip((south, west),
             [x / 2. ** 64 for x in unpack_from('>QQ', sum)], loc)]

@@ -5,6 +5,10 @@ name = "pypi"
 
 [packages]
 cachetools = "*"
+python-telegram-bot = "*"
+pytz = "*"
+tzwhere = "*"
+parse = "*"
 
 [dev-packages]
 
