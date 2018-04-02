@@ -1,4 +1,4 @@
-### GeohashingBot
+# GeohashingBot
 
 ## What is this?
 
@@ -7,9 +7,13 @@ This is a [telegram bot](https://telegram.org/blog/bot-revolution), which allows
 ## Installation
 
 If you want to host the bot yourself, you need to install some dependencies first. Obviously, you need `python3` and `pip`, what you probably already have installed. Then install `pipenv` by typing
+
 	pip install pipenv
+
 `pipenv` will handle all dependencies and virtual python environments. Now type
+
 	pipenv install
+
 to finish the installation.
 
 ## Usage
