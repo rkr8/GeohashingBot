@@ -1,3 +1,6 @@
 cache_size = 42
 dow_url = 'http://carabiner.peeron.com/xkcd/map/data/%Y/%m/%d'
 token='<your telegram bot token>'
+maps_url = 'https://www.google.com/maps?q={0},{1}'
+osm_url = 'https://www.openstreetmap.org/?mlat={0}&mlon={1}'
+wiki_url = 'http://wiki.xkcd.com/geohashing/{0}_{1}_{2}'

@@ -16,6 +16,12 @@ If you want to host the bot yourself, you need to install some dependencies firs
 
 to finish the installation.
 
+## Configuration
+
+	cp config.py.default config.py
+
+Then add your own bot token to the `config.py` file.
+
 ## Usage
 
 	pipenv shell
