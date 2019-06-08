@@ -3,7 +3,10 @@ webhook_port = 8443
 webhook_url = '<your webhook url pattern>'
 webhook_token_length = 128
 cache_size = 42
-dow_url = 'http://carabiner.peeron.com/xkcd/map/data/%Y/%m/%d'
+dow_urls = ['http://geo.crox.net/djia/%Y/%m/%d',
+            'http://www1.geo.crox.net/djia/%Y/%m/%d',
+            'http://www2.geo.crox.net/djia/%Y/%m/%d',
+            'http://carabiner.peeron.com/xkcd/map/data/%Y/%m/%d']
 token='<your telegram bot token>'
 maps_url = 'https://www.google.com/maps?q={0},{1}'
 osm_url = 'https://www.openstreetmap.org/?mlat={0}&mlon={1}'

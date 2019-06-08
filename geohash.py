@@ -20,8 +20,12 @@ def dow(date):
     if date in dow_cache:
         return dow_cache[date]
     else:
-        dow_cache[date] = \
-            42 #urlopen(date.strftime(config.dow_url)).read().decode('utf-8')
+        for dow_url in config.dow_urls:
+            try:
+                dow_cache[date] = \
+                    urlopen(date.strftime(dow_url)).read().decode('utf-8')
+            except:
+                pass
         return dow_cache[date]
 
 
