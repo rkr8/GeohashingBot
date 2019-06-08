@@ -56,7 +56,10 @@ def main():
 
     dispatcher.add_handler(InlineQueryHandler(inlinequery, pattern='^-?[0-9]{1,2} -?[0-9]{1,3}$'))
 
-    updater.start_polling()
+    updater.start_webhook(listen=config.webhook_listen,
+                          port=config.webhook_port,
+                          url_path=config.token)
+    updater.bot.set_webhook(config.webhook_url.format(config.token))
     updater.idle()
 
 if __name__ == '__main__':

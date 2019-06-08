@@ -21,7 +21,7 @@ def dow(date):
         return dow_cache[date]
     else:
         dow_cache[date] = \
-            urlopen(date.strftime(config.dow_url)).read().decode('utf-8')
+            42 #urlopen(date.strftime(config.dow_url)).read().decode('utf-8')
         return dow_cache[date]
 
 
