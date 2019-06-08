@@ -1,6 +1,7 @@
 webhook_listen = '0.0.0.0'
 webhook_port = 8443
 webhook_url = '<your webhook url pattern>'
+webhook_token_length = 128
 cache_size = 42
 dow_url = 'http://carabiner.peeron.com/xkcd/map/data/%Y/%m/%d'
 token='<your telegram bot token>'

@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import logging
+from secrets import token_urlsafe
 from datetime import datetime
 from uuid import uuid4
 from telegram import InlineQueryResultLocation, InlineKeyboardMarkup, \
@@ -21,6 +22,8 @@ logger = logging.getLogger(__name__)
 parser = compile('{:d} {:d}')
 
 tzw = tzwhere()
+
+webhook_token = token_urlsafe(config.webhook_token_length)
 
 def inlinequery(bot, update):
     loc = parser.parse(update.inline_query.query).fixed
@@ -58,8 +61,8 @@ def main():
 
     updater.start_webhook(listen=config.webhook_listen,
                           port=config.webhook_port,
-                          url_path=config.token)
-    updater.bot.set_webhook(config.webhook_url.format(config.token))
+                          url_path=webhook_token)
+    updater.bot.set_webhook(config.webhook_url.format(webhook_token))
     updater.idle()
 
 if __name__ == '__main__':
